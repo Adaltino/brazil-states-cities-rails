@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cidades Brasileiras</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbo-track': 'reload' %>
+</head>
+<body>
+<div class="container">
+<%= form_with url: cities_path, method: :get, local: true, class: "search-form" do %>
+  <div>
+    <%= label_tag :state_id, 'Estado', class: 'form-label' %>
+    <%= select_tag :state_id, options_from_collection_for_select(State.all, :id, :description), include_blank: true, class: 'form-select' %>
+  </div>
+  <div>
+    <%= label_tag :description, 'Nome da Cidade', class: 'form-label'%>
+    <%= text_field_tag :description, nil, class: 'form-input' %>
+  </div>
+  <%= submit_tag 'Buscar', class: 'submit-button' %>
+<% end %>
+
+       <table class="city-table">
+       <thead>
+          <tr>
+          <th>Nome da Cidade</th>
+          <th>Estado</th>
+          </tr>
+       </thead>
+       <tbody>
+          <% @cities.each do |city| %>
+          <tr>
+              <td><%= city.description %></td>
+              <td><%= city.state.description %></td>
+          </tr>
+          <% end %>
+       </tbody>
+      </table>
+    </div>
+  </body>
+</html>

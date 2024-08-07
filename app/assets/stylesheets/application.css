@@ -1,0 +1,65 @@
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+  
+.title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+  
+.search-form {
+    margin-bottom: 30px;
+}
+  
+.form-group {
+    margin-bottom: 15px;
+}
+  
+.form-label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+  
+.form-select,
+.form-input {
+    width: 100%;
+    padding: 8px;
+    font-size: 1rem;
+}
+  
+.submit-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+  
+.submit-button:hover {
+    background-color: #0056b3;
+}
+  
+  /* Estilizar a tabela */
+.city-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+  
+.city-table th,
+.city-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+  
+.city-table th {
+    background-color: #f4f4f4;
+}
+  
