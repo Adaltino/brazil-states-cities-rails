@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 parana = State.create(description: 'Paraná')
 santa_catarina = State.create(description: 'Santa Catarina')
 rio_grande_do_sul = State.create(description: 'Rio Grande do Sul')
